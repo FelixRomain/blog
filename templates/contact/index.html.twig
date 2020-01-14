@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block body %}
+
+<style>
+
+body {
+    background-image: url('/build/assets/img/header.png');
+}
+
+</style>
+
+<section class="contact">
+<div class="container mt-5">
+    {{form_start(form)}}
+        <div class="col-md-12 shadow p-3">
+        <h2>Contactez-moi avec le formulaire ci-dessous</h2>
+            {% for message in app.flashes('success') %}
+                <div class="alert alert-success">
+                    {{ message }}
+                </div>
+            {% endfor %}
+
+            {% if not form.vars.valid %}
+                <div class="alert alert-danger">
+                    Erreur au niveau du formulaire de contact
+                </div>
+            {% endif %}
+            <div class="row">
+                <div class="col-md-6">
+                    {{form_row(form.firstname)}}
+                </div>
+                <div class="col-md-6">
+                    {{form_row(form.lastname)}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    {{form_row(form.object)}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                {{form_row(form.email)}}
+                </div>
+                <div class="col-md-6">
+                {{form_row(form.phone)}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    {{form_row(form.message)}}
+                </div>
+            </div>
+            <div class="form-group row justify-content-end pr-3">
+                <button class="btn btn-danger">Envoyer</button>
+            </div>
+        </div>
+    {{form_end(form)}}
+</div>
+</section>
+
+{% endblock %}
