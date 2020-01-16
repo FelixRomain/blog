@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="IE=edge" http-equiv="X-UA-Compatible">
+        <title>Administration MNC</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        {% block stylesheet %}
+            <link href="/build/common/css/adminlteskin.css" rel="stylesheet">
+            <link href="/build/common/css/adminlte.css" rel="stylesheet">
+            <link href="/build/common/css/app.css" rel="stylesheet">
+            <link href="/build/common/css/bootstrap.css" rel="stylesheet">
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+            <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic" rel="stylesheet">
+        </head>
+    {% endblock %}
+
+    <body class="hold-transition skin-blue sidebar-mini">
+        <div
+            class="wrapper">
+            <!-- Barre du haut bleue -->
+            {% include 'admin/_header.html.twig' %}
+            <!-- Menu de gauche -->
+            {% include 'admin/_menu.html.twig' %}
+
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                {# <!-- Content Header (Page header) -->
+                                <section class="content-header">
+                                    <h1>
+                                        Dashboard
+                                        <small>Control panel</small>
+                                    </h1>
+                                </section> #}
+                <div class="container-fluid">
+                    <!-- Main content -->
+                    {% block body %}
+    
+                    {% endblock %}
+                </div>
+                <!-- /.content -->
+            </div>
+
+            <!-- footer -->
+            {% include 'admin/_footer.html.twig' %}
+
+
+            <!-- /.control-sidebar -->
+            <!-- Add the sidebar's background. This div must be placed
+                               immediately after the control sidebar --><div class="control-sidebar-bg"> </div>
+        </div>
+        {% block javascripts %}
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+            <script src="/build/common/js/adminlte.js"></script>
+            <script src="/build/common/js/jquery.js"></script>
+            <script src="/build/common/js/app.js"></script>
+        {% endblock %}
+    </body>
+</html>

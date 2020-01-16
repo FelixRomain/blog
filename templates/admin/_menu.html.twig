@@ -1,0 +1,146 @@
+{# {% set nb_etudiants_inactifs = notification_admin.getNbEtudiantsInactifs() %}
+{% set nb_logements_attente_validation = notification_admin.getNbLogementsAttenteValidation() %} #}
+<aside
+	class="main-sidebar">
+	<!-- sidebar: style can be found in sidebar.less -->
+	<section class="sidebar">
+		<!-- /.search form -->
+		<!-- sidebar menu: : style can be found in sidebar.less -->
+			<ul class="sidebar-menu" data-widget="tree"> <li class="header">Navigation</li>
+			<li>
+				<a href="{{ path("admin") }}">
+					<i class="fa fa-tachometer"></i>
+					<span>Dashboard</span>
+				</a>
+			</li>
+			{% if is_granted('ROLE_ADMIN') %}
+				<li>
+					<a href="">
+						<i class="fa fa-user"></i>
+						<span>Administrateurs</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<i class="fa fa-envelope"></i>
+						<span>Contact</span>
+					</a>
+				</li>
+				<li class="treeview" style="height: auto;">
+					<a href="#">
+						<i class="fa fa-users"></i>
+						<span>Étudiants</span>
+						<span class="pull-right-container">
+							<i class="fa fa-angle-left pull-right"></i>
+						</span>
+
+					</a>
+					<ul class="treeview-menu" style="">
+						<li>
+							<a href="">Étudiants</a>
+						</li>
+						<li>
+
+						</li>
+					</ul>
+				</li>
+
+				<li class="treeview" style="height: auto;">
+					<a href="#">
+						<i class="fa fa-briefcase"></i>
+						<span>Stages et emplois</span>
+						<span class="pull-right-container">
+							<i class="fa fa-angle-left pull-right"></i>
+						</span>
+					</a>
+					<ul class="treeview-menu" style="">
+						<li>
+							<a href="">Toutes les offres</a>
+						</li>
+						<li>
+							<a href="">Catégories d'offres
+							</a>
+						</li>
+						<li>
+							<a href="">Toutes les demandes de stages</a>
+						</li>
+					</ul>
+				</li>
+
+
+				<li class="treeview" style="height: auto;">
+					<a href="#">
+						<i class="fa fa-home"></i>
+						<span>Logements</span>
+						<span class="pull-right-container">
+							<i class="fa fa-angle-left pull-right"></i>
+						</span>
+					</a>
+					<ul class="treeview-menu" style="">
+						<li>
+							<a href="">Toutes les demandes</a>
+						</li>
+					</ul>
+				</li>
+
+			{% endif %}
+			{% if is_granted(['ROLE_ADMIN', 'ROLE_STAGIAIRE']) %}
+
+				<li class="treeview" style="height: auto;">
+					<a href="#">
+						<i class="fa fa-graduation-cap"></i>
+						<span>Cursus</span>
+						<span class="pull-right-container">
+							<i class="fa fa-angle-left pull-right"></i>
+						</span>
+					</a>
+					<ul class="treeview-menu" style="">
+						<li>
+							<a href="">Cursus</a>
+						</li>
+						<li>
+							<a href="">Domaines</a>
+						</li>
+						<li>
+							<a href="">Disciplines</a>
+						</li>
+					</ul>
+				</li>
+			{% endif %}
+			{% if is_granted(['ROLE_ADMIN', 'ROLE_STAGIAIRE']) %}
+
+				<li class="treeview" style="height: auto;">
+					<a href="#">
+						<i class="fa fa-file"></i>
+						<span>Partenaires</span>
+						<span class="pull-right-container">
+							<i class="fa fa-angle-left pull-right"></i>
+						</span>
+					</a>
+					<ul class="treeview-menu" style="">
+						<li>
+							<a href="">
+								<span>Partenaires</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<span>Rubriques</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="">
+						<i class="fa fa-file"></i>
+						<span>Pages</span>
+					</a>
+				</li>
+				
+			{% endif %}
+
+
+		</ul>
+	</section>
+	<!-- /.sidebar -->
+</aside>
