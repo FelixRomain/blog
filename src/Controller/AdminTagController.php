@@ -13,14 +13,14 @@ use Symfony\Component\Routing\Annotation\Route;
 /**
  * @Route("/admin/tag")
  */
-class TagController extends AbstractController
+class AdminTagController extends AbstractController
 {
     /**
-     * @Route("/", name="tag_index", methods={"GET"})
+     * @Route("/", name="admin_tag_index", methods={"GET"})
      */
     public function index(TagRepository $tagRepository): Response
     {
-        return $this->render('tag/index.html.twig', [
+        return $this->render('admin/tag/index.html.twig', [
             'tags' => $tagRepository->findAll(),
         ]);
     }
@@ -42,7 +42,7 @@ class TagController extends AbstractController
             return $this->redirectToRoute('tag_index');
         }
 
-        return $this->render('tag/new.html.twig', [
+        return $this->render('admin/tag/new.html.twig', [
             'tag' => $tag,
             'form' => $form->createView(),
         ]);
@@ -53,7 +53,7 @@ class TagController extends AbstractController
      */
     public function show(Tag $tag): Response
     {
-        return $this->render('tag/show.html.twig', [
+        return $this->render('admin/tag/show.html.twig', [
             'tag' => $tag,
         ]);
     }
@@ -72,7 +72,7 @@ class TagController extends AbstractController
             return $this->redirectToRoute('tag_index');
         }
 
-        return $this->render('tag/edit.html.twig', [
+        return $this->render('admin/tag/edit.html.twig', [
             'tag' => $tag,
             'form' => $form->createView(),
         ]);

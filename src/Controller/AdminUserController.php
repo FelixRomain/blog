@@ -13,10 +13,10 @@ use Symfony\Component\Routing\Annotation\Route;
 /**
  * @Route("/admin/user")
  */
-class UserController extends AbstractController
+class AdminUserController extends AbstractController
 {
     /**
-     * @Route("/", name="user_index", methods={"GET"})
+     * @Route("/", name="admin_user_index", methods={"GET"})
      */
     public function index(UserRepository $userRepository): Response
     {

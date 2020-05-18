@@ -26,11 +26,6 @@ class Article
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $category;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
     private $paragraph;
 
     /**
@@ -51,17 +46,17 @@ class Article
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $tags;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
     private $slug;
 
     /**
      * @ORM\ManyToMany(targetEntity="App\Entity\Tag", inversedBy="articles")
      */
     private $tag;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Category", inversedBy="articles")
+     */
+    private $category;
 
     public function __construct()
     {
@@ -81,18 +76,6 @@ class Article
     public function setTitle(string $title): self
     {
         $this->title = $title;
-
-        return $this;
-    }
-
-    public function getCategory(): ?string
-    {
-        return $this->category;
-    }
-
-    public function setCategory(string $category): self
-    {
-        $this->category = $category;
 
         return $this;
     }
@@ -145,18 +128,6 @@ class Article
         return $this;
     }
 
-    public function getTags(): ?string
-    {
-        return $this->tags;
-    }
-
-    public function setTags(string $tags): self
-    {
-        $this->tags = $tags;
-
-        return $this;
-    }
-
     public function getSlug(): ?string
     {
         return $this->slug;
@@ -191,6 +162,18 @@ class Article
         if ($this->tag->contains($tag)) {
             $this->tag->removeElement($tag);
         }
+
+        return $this;
+    }
+
+    public function getCategory(): ?Category
+    {
+        return $this->category;
+    }
+
+    public function setCategory(?Category $category): self
+    {
+        $this->category = $category;
 
         return $this;
     }

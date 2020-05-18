@@ -14,6 +14,25 @@ h3 {
 
 /* /font-size */
 
+.block-article, .project-box {
+    border: solid 1px #aaa;
+    box-shadow: 2px 2px #aaa !important;
+}
+
+.project-box {
+    border: solid 1px #aaa;
+    box-shadow: 2px 2px #aaa !important;
+    margin:auto;
+    padding:16px;
+}
+
+.button-article {
+    padding: 4px; 
+    color: #FFF;
+    text-transform: uppercase;
+    float: right;
+}
+
 /* navbar */
 
 .navbar {
@@ -105,6 +124,7 @@ section.presentation h2 {
 .presentation p {
     width: 100%;
     margin-top: 30px;
+    font-size: 16px;
 }
 
 .presentation h3 {
@@ -128,7 +148,11 @@ section.presentation h2 {
 }
 
 .activites {
-    width: 225px;
+    width: 263px;
+}
+
+.activites p {
+    font-size: 16px;
 }
 
 .presentation img {
