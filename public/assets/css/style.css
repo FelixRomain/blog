@@ -1,0 +1,443 @@
+/* font-size */
+
+h2 {
+    padding-bottom: 3%;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Arial, sans-serif;
+    padding-top: 3%;
+}
+
+h3 {
+    margin-top: 40px !important;
+}
+
+/* /font-size */
+
+.block-article, .project-box {
+    border: solid 1px #aaa;
+    box-shadow: 2px 2px #aaa !important;
+}
+
+.project-box {
+    border: solid 1px #aaa;
+    box-shadow: 2px 2px #aaa !important;
+    margin:auto;
+    padding:16px;
+}
+
+.button-article {
+    padding: 4px; 
+    color: #FFF;
+    text-transform: uppercase;
+    float: right;
+}
+
+/* navbar */
+
+.navbar {
+    width: 100%;
+    z-index: 99999;
+}
+
+.navbar-nav, .navbar-brand {
+    padding: 5px !important;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.solid-nav {
+    background-color: white;
+    border-bottom: 1px black solid;
+    transition: all 0.3s linear;
+}
+
+/* /navbar */
+
+/* Header */
+
+.parralax{
+    height: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../img/header.png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    position: relative;
+  }
+  .parralax img{
+    position: absolute;
+    z-index: 1;
+    width: 50%;
+    right: 10px;
+    bottom: 0px;
+  }
+  .parralax div{
+    z-index: 2;
+    color: white;
+  }
+
+section.header_img h1 {
+    text-align: center;
+    color: #FFF;
+    font-size: 80pt;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+}
+
+section.header_img p {
+    text-align: center;
+    color: #FFF;
+    font-size: 35pt;
+}
+
+@media only screen and (max-width: 414px) {
+section.header_img h1 {
+    display:none;
+}
+
+.parralax {
+    background-size: auto;
+}
+
+section.header_img p {
+    display:none;
+}
+
+.parralax img {
+    width: 70%;
+}
+}
+
+/* /Header */
+
+/* presentation */
+
+section.presentation h2 {
+    color : #7b95a2;
+}
+
+.presentation p {
+    width: 100%;
+    margin-top: 30px;
+    font-size: 16px;
+}
+
+.presentation h3 {
+    background-color: #7b95a2;
+    color: #FFF;
+    text-transform: uppercase;
+    padding: 5px;
+}
+
+.presentation button {
+    background-color: #8bb4c9;
+    padding: 5px;
+    color: #FFF;
+    text-transform: uppercase;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.objectif {
+    width: 145px;
+}
+
+.activites {
+    width: 263px;
+}
+
+.activites p {
+    font-size: 16px;
+}
+
+.presentation img {
+    width: 400px;
+    margin-top: 110px;
+}
+
+@media only screen and (max-width: 414px) {
+section.presentation {
+    padding-bottom : 10%;
+}
+}
+
+/* /presentation */
+
+/* experience */
+
+section.experiences .container {
+    padding-bottom: 3%;
+}
+
+section.experiences h2 {
+    color : #7b95a2;
+}
+
+/* /experience */
+
+/* diplome */
+
+section.diplomes .container {
+    padding-bottom: 3%;
+}
+
+section.diplomes {
+    background-color: #7b95a2;
+    width: 100%;
+}
+
+section.diplomes h2 {
+    color : #FFF;
+}
+
+
+/* /diplome */
+
+
+/* competences */
+
+.competences h3 {
+    background-color: white;
+    color: #7b95a2;
+    padding: 5px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+section.competences h2 {
+    color : #FFF;
+}
+
+.competences h4 {
+    color: #FFF;
+}
+
+section.competences {
+    background-color: #7b95a2;
+    width: 100%;
+}
+
+section.competences .container {
+    padding-bottom: 3%;
+}
+
+/* /competences */
+
+/* articles */
+
+section.articles {
+    width: 100%;
+}
+
+section.articles h2 {
+    color : #7b95a2;
+}
+
+.articles .col-sm-4 img {
+    margin: auto;
+    width: 100%;
+    border: solid #000 2px;
+}
+
+.wordpress img, .shopify img, .git img {
+    margin-top: 5% !important;
+}
+
+.articles .col-sm-4 {
+    margin: auto;
+    width: 100%;
+}
+
+  b.cercle {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 25px auto;
+    background-color: #FFF;
+    border-radius: 50%;
+    border: solid #000 1px;
+    position: absolute;
+    z-index: 1;
+    bottom: 110px;
+    right: 20px;
+    text-align: center;
+    color : #000;
+  }
+
+section.articles .container {
+    padding-bottom: 3%;
+}
+
+.articles button {
+    background-color: #8bb4c9;
+    padding: 5px;
+    color: #FFF;
+    text-transform: uppercase;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+
+/* /articles */
+
+/* Calcul */
+
+  .calcul {
+    background: url(../img/header.png);
+      height: 400px;
+      width: 100%;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+
+  section.calcul img {
+    width: 40%;
+    display: block;
+    margin: auto;
+}
+
+section.calcul h3, section.calcul p {
+    text-align: center;
+    color: #FFF;
+    font-size: 2em;
+}
+
+section.calcul .container .row div {
+    top: 55px;
+}
+
+section.calcul {
+    margin-top: -16px;
+}
+
+@media only screen and (max-width: 414px) {
+    .calcul {
+          height: 900px;
+      }
+}
+
+/* /Calcul */
+
+/* Projets */
+
+section.projets h2 {
+    color : #FFF;
+}
+
+section.projets {
+    background-color: #7b95a2;
+}
+/* /Projets */
+
+/* Dernier-articles */
+
+section.dernier-articles h2 {
+    color : #7b95a2;
+}
+
+section.dernier-articles button {
+    background-color: #8bb4c9;
+    padding: 5px;
+    color: #FFF;
+    text-transform: uppercase;
+    margin-top: 20px;
+    font-size: 20px;
+    float: right; 
+    margin-top:6px;
+}
+
+section.dernier-articles hr{
+    background: #7b95a2;
+    margin-top: 3rem !important;
+}
+
+section.dernier-articles .container {
+    padding-bottom: 3%;
+}
+/* /Dernier-articles */
+
+section.contact h2 {
+    color: #FFF;
+}
+
+section.contact label {
+    color: #FFF;
+}
+
+
+@media screen and (max-width: 1192px) {
+    .presentation img {
+        margin-top: 117px;
+    }
+  }
+
+  @media screen and (max-width: 988px) {
+    .presentation img {
+        margin-top: 306px;
+    }
+
+    .calcul {
+        height: 330px;
+    }
+  }
+
+  @media screen and (max-width: 773px) {
+    section.header_img h1 {
+       display: none;
+    }
+    section.header_img p {
+        display: none;
+     }
+
+     section.calcul img {
+         margin-top: 15%;
+         width: 30%;
+     }
+
+     .parralax img {
+         width: 40%;
+     }
+
+     section.diplomes {
+         margin-top: 5%;
+     }
+
+     .calcul {
+         height: 1220px;
+     }
+  }
+
+  @media screen and (max-width: 597px) {
+    section.footer div.text-center {
+        width: 65%;
+        margin:auto;
+    }
+
+    section.footer div.text-center div h5 {
+        margin-top: 30px;
+    }
+
+    .parralax img {
+        width: 50%;
+    }
+
+ }
+
+  @media screen and (max-width: 414px) {
+     .calcul {
+         height: 1040px;
+     }
+
+     .parralax img {
+        width: 70%;
+    }
+
+  }
+
